@@ -18,7 +18,10 @@ contract wallet{
     public
     returns (bool) {
         bool winState = false;
-        //TODO: game login here
+        if(playerSeed % 100 < 45){
+            winState = true;
+        }
+        
         if(winState && address(this).balance >= (playerBid * winMultiplier) ){
             charityPayout = 0;
             devPayout = 0;
@@ -42,7 +45,7 @@ contract wallet{
         if(playerAddress.send(playerPayout) && charityAddress.send(charityPayout) && devAddress.send(devPayout)){
             return true;
         } else{
-            false;
+            return false;
         }
     }
     
