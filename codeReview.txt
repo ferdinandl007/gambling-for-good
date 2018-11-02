@@ -1,0 +1,27 @@
+in https://github.com/DaoCasino/dc-core/blob/development/src/DAppPlayerInstance.ts#L236
+    line 288 : async play(params: { userBet: number; gameData: any; rndOpts: Rnd["opts"] }) {
+    function calls itself on line 339, before the only return statement on 365
+    this may generate a recursive infinte loop
+
+in tutorial.js
+    lack of semicolons to terminate lines
+
+I need to submit my PRIVATE KEY to access the game!?
+
+
+################################
+things I need to work:
+
+###git-clone-for-charity
+
+
+###dc-sdk-example
+
+
+###dc-core
+
+###gambling-for-good
+
+
+
+
